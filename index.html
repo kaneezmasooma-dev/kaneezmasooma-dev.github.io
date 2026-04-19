@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaneez Masooma | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #111111;
+            --accent: #00ffcc; 
+            --text-dim: #a0a0a0;
+            --text-bright: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dim);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+        nav {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-family: 'Space Mono', monospace; color: var(--accent); font-weight: 700; font-size: 1.2rem; }
+        nav a { color: var(--text-dim); margin-left: 30px; text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+        }
+        .hero h1 {
+            font-size: clamp(3.5rem, 8vw, 5.5rem);
+            color: var(--text-bright);
+            margin: 0;
+            line-height: 1;
+        }
+        .hero p {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-family: 'Space Mono', monospace;
+            color: var(--text-bright);
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::after { content: ""; height: 1px; flex: 1; background: #333; margin-left: 20px; }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            margin-bottom: 100px;
+        }
+        .about-box { font-size: 1.2rem; line-height: 1.6; }
+
+        .skills-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            border: 1px solid #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: 'Space Mono', monospace;
+            transition: 0.3s;
+        }
+        .skill-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,255,204,0.05); }
+
+        .project-highlight {
+            background: var(--surface);
+            padding: 50px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: 0.4s;
+        }
+        .project-highlight:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 204, 0.05); }
+        .project-highlight h3 { font-size: 2.5rem; color: var(--text-bright); margin: 0 0 15px 0; }
+        .project-highlight p { max-width: 600px; margin-bottom: 30px; }
+        
+        .live-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .live-btn:hover { background: #fff; transform: scale(1.05); }
+
+        footer {
+            padding: 100px 0 50px;
+            text-align: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+        }
+        .contact-link { color: var(--text-bright); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3.5rem; }
+            .project-highlight { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">KM_DEVELOPER</div>
+            <div>
+                <a href="#work">WORK</a>
+                <a href="#about">ABOUT</a>
+                <a href="mailto:kaneezmasooma32@gmail.com">CONTACT</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <p>// Based in Lahore, Pakistan</p>
+            <h1>Kaneez Masooma.</h1>
+            <p>Aspiring Software Engineer & Web Specialist.</p>
+        </section>
+
+        <section id="about">
+            <div class="section-title">01. ABOUT</div>
+            <div class="about-grid">
+                <div class="about-box">
+                    I am a Computer Science student at Superior University with a keen focus on building high-performance web applications. 
+                    I specialize in bridging the gap between complex logic and clean user interfaces.
+                </div>
+                <div class="skills-wrap">
+                    <div class="skill-tag">HTML5</div>
+                    <div class="skill-tag">CSS3</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Java</div>
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">Firebase</div>
+                    <div class="skill-tag">Git</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="section-title">02. FEATURED WORK</div>
+            <div class="project-highlight">
+                <p style="color: var(--accent); margin-bottom: 10px;">LATEST PRODUCTION</p>
+                <h3>Rimsy Mart</h3>
+                <p>
+                    A fully-realized e-commerce platform designed to provide a seamless shopping experience. 
+                    Focused on responsive architecture, performance optimization, and clean user interface. 
+                    This project showcases my ability to deliver production-ready web solutions.
+                </p>
+                <a href="https://rimsyymart.com" target="_blank" class="live-btn">Visit Website</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>SAY HELLO: <a href="mailto:kaneezmasooma32@gmail.com" class="contact-link">kaneezmasooma32@gmail.com</a></p>
+            <p style="margin-top: 50px; color: #333;">&copy; 2026 Designed & Developed by Kaneez Masooma</p>
+        </footer>
+    </div>
+
+</body>
+</html>
