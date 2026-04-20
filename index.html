@@ -37,7 +37,7 @@
         nav a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 
         .hero {
-            height: 80vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -60,6 +60,7 @@
             font-family: 'Space Mono', monospace;
             color: var(--text-bright);
             font-size: 1.5rem;
+            margin-top: 80px;
             margin-bottom: 40px;
             display: flex;
             align-items: center;
@@ -70,7 +71,7 @@
             display: grid;
             grid-template-columns: 1.5fr 1fr;
             gap: 40px;
-            margin-bottom: 100px;
+            margin-bottom: 40px;
         }
         .about-box { font-size: 1.2rem; line-height: 1.6; }
 
@@ -85,6 +86,17 @@
         }
         .skill-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,255,204,0.05); }
 
+        .exp-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .exp-card {
+            background: var(--surface);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
+        .exp-card h4 { color: var(--text-bright); margin: 0 0 5px 0; font-size: 1.1rem; }
+        .exp-card .company { color: var(--accent); font-family: 'Space Mono', monospace; font-size: 0.85rem; margin-bottom: 10px; }
+        .exp-card p { font-size: 0.95rem; margin: 0; }
+
         .project-highlight {
             background: var(--surface);
             padding: 50px;
@@ -93,6 +105,7 @@
             overflow: hidden;
             border: 1px solid #222;
             transition: 0.4s;
+            margin-bottom: 30px;
         }
         .project-highlight:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 204, 0.05); }
         .project-highlight h3 { font-size: 2.5rem; color: var(--text-bright); margin: 0 0 15px 0; }
@@ -135,47 +148,64 @@
             <div class="logo">KM_DEVELOPER</div>
             <div>
                 <a href="#work">WORK</a>
+                <a href="#experience">EXPERIENCE</a>
                 <a href="#about">ABOUT</a>
                 <a href="mailto:kaneezmasooma32@gmail.com">CONTACT</a>
             </div>
         </nav>
 
         <section class="hero">
-            <p>// Based in Lahore, Pakistan</p>
             <h1>Kaneez Masooma.</h1>
-            <p>Aspiring Software Engineer & Web Specialist.</p>
+            <p>CS Student & Digital Content</p>
         </section>
 
         <section id="about">
             <div class="section-title">01. ABOUT</div>
             <div class="about-grid">
                 <div class="about-box">
-                    I am a Computer Science student at Superior University with a keen focus on building high-performance web applications. 
-                    I specialize in bridging the gap between complex logic and clean user interfaces.
+                    I am a Computer Science student at Superior University. I combine technical development skills with digital marketing expertise to create high-impact web solutions and optimized content strategies.
                 </div>
                 <div class="skills-wrap">
-                    <div class="skill-tag">HTML5</div>
-                    <div class="skill-tag">CSS3</div>
-                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Shopify</div>
+                    <div class="skill-tag">Off-Page SEO</div>
+                    <div class="skill-tag">Content Writing</div>
                     <div class="skill-tag">Java</div>
-                    <div class="skill-tag">C++</div>
                     <div class="skill-tag">Firebase</div>
-                    <div class="skill-tag">Git</div>
+                    <div class="skill-tag">HTML/CSS/JS</div>
+                    <div class="skill-tag">Digital Marketing</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-title">02. EXPERIENCE</div>
+            <div class="exp-grid">
+                <div class="exp-card">
+                    <h4>Off-Page SEO & Content Writer</h4>
+                    <div class="company">1 Year Experience</div>
+                    <p>Expertise in developing comprehensive service pages and executing off-page SEO strategies to enhance digital authority and search rankings.</p>
                 </div>
             </div>
         </section>
 
         <section id="work">
-            <div class="section-title">02. FEATURED WORK</div>
+            <div class="section-title">03. FEATURED WORK</div>
             <div class="project-highlight">
-                <p style="color: var(--accent); margin-bottom: 10px;">LATEST PRODUCTION</p>
+                <p style="color: var(--accent); margin-bottom: 10px;">E-COMMERCE PRODUCTION</p>
                 <h3>Rimsy Mart</h3>
                 <p>
-                    A fully-realized e-commerce platform designed to provide a seamless shopping experience. 
-                    Focused on responsive architecture, performance optimization, and clean user interface. 
-                    This project showcases my ability to deliver production-ready web solutions.
+                    A fully optimized Shopify e-commerce platform. Focused on user experience, professional layout, and seamless product management to drive online sales.
                 </p>
-                <a href="https://rimsyymart.com" target="_blank" class="live-btn">Visit Website</a>
+                <a href="https://Rimsyymart-3.myshopify.com" target="_blank" class="live-btn">Visit Website</a>
+            </div>
+
+            <div class="project-highlight">
+                <p style="color: var(--accent); margin-bottom: 10px;">MOBILE APPLICATION</p>
+                <h3>Small Business Manager</h3>
+                <p>
+                    An Android application built with Java and Firebase to streamline inventory and sales tracking for small business owners.
+                </p>
+                <a href="https://github.com/kaneezmasooma-dev" target="_blank" class="live-btn">View Code</a>
             </div>
         </section>
 
